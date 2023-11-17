@@ -15,6 +15,8 @@ const db = mysql.createConnection(
     console.log(`Connected to the classlist_db database.`)
 );
 
+// main menu
+
 const landingQuestion = [
     {
         type: "list",
@@ -24,43 +26,49 @@ const landingQuestion = [
     }
 ]
 
+// master app containing the db query functions
+
 function mainMenu() {
     inquirer.prompt(landingQuestion).then(data => {
         let userChoice = data.landing;
-        if (userChoice === "View all departments") { //done
+        if (userChoice === "View all departments") {
             viewDepts();
             setTimeout(() => {
                 stayOrGo();
             }, 1000);
 
-        } if (userChoice === "View all roles") {  //done
+        } if (userChoice === "View all roles") {
             viewRoles();
             setTimeout(() => {
                 stayOrGo();
             }, 1000);
 
-        } if (userChoice === "View all employees") {  //done
+        } if (userChoice === "View all employees") {
             viewEmps();
             setTimeout(() => {
                 stayOrGo();
             }, 1000);
 
-        } if (userChoice === "Add a department") { //done
+        } if (userChoice === "Add a department") {
             initNewDept();
 
         } if (userChoice === "Add a role") {
             initNewRole();
 
-        } if (userChoice === "Add an employee") { //done
+        } if (userChoice === "Add an employee") {
             initAddEmp();
 
-        } if (userChoice === "Update an employee role") { //done
+        } if (userChoice === "Update an employee role") {
             initUpdateRole();
         }
     })
 }
 
+// call master function to run app
+
 mainMenu();
+
+//function for returning to main menu or exiting app
 
 function stayOrGo() {
     inquirer.prompt({
