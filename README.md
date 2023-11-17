@@ -10,7 +10,7 @@ This is a helpful tool for a small but growing company. To use this app, a user 
 This app uses JavaScript, Node.js (including the sequelize, dotenv, and inquirer dependencies) and mySQL. Also used Screencastify to create the demo video. There is no front-end or server for this app.
 
 ## Demo Video and Image
-Please watch the video here!
+Please watch the video [here](https://drive.google.com/file/d/1YybZpyBcg7bYBxraJvFS3koOIPltMiB3/view)!
 
 Here is an example of what the app looks like:
 ![Demo screenshot](./img/Screenshot%202023-11-16%20at%207.10.59%20PM.png)
